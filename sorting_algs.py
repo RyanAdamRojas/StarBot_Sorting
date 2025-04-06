@@ -267,6 +267,29 @@ def print_outputs(
 
 
 if __name__ == "__main__":
+    """
+    Most images of the computer screen (taken with my iphone) look like this:
+    ____________________
+    [txt][txt][txt][txt]
+    [txt][txt][txt][txt]
+    [txt][txt][txt][txt]
+    ____________________
+    where the "[txt]" is a graphical box on the screen that holds all the info (features) for each transaction
+    
+    But look like this:
+    ____________________
+    [txt][txt][txt][txt]
+    [txt][txt]
+    
+    ____________________
+    where we have less graphical boxes bc were at the butt end of the transaction-logs for the day.
+    
+    So, in each [txt] graphical-area, features like total and transaction number are right next to each other.
+    The image-to-text tool we used seemingly grabed the text from the whole image at random.
+    My current method is to conceptually impose rows and columns into the image and use the proximitt of the 
+    coordinates to associate them with eachother. But I cant get it to work.
+    - Ryan
+    """
     times_1 = sort_features_A(times_1)
     numbers_1 = sort_features_A(numbers_1)
     registers_1 = sort_features_A(registers_1)
